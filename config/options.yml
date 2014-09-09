@@ -1,6 +1,0 @@
----
-:url: http://qa.ole.kuali.org/
-:docstore_url: http://docstore.qa.ole.kuali.org/
-:default_wait: 30
-:headless?: true
-:development?: true
