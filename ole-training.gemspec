@@ -1,7 +1,7 @@
 # coding: utf-8
 lib = File.expand_path('../lib/', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'kuality_ole/version'
+require 'ole_training/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "ole-training"
@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency "headless"                    # XVFB Session-Handling Gem
-  spec.add_dependency "rspec","~> 2.14"             # Provides expectation language
+  spec.add_dependency "rspec","~> 2.14.0"             # Provides expectation language
   spec.add_dependency "net-http-persistent"         # Stabilizes HTTP connections
   spec.add_dependency "cucumber"                    # Provides the main testing 
   spec.add_dependency "test-factory",">= 0.5.1"     # Provides LFM for Watir-Webdriver
