@@ -1,4 +1,4 @@
 
 
-class BasePage
+class BasePage < PageFactory
 end
