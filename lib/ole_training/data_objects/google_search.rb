@@ -7,7 +7,7 @@ class GoogleSearch < DataFactory
     defaults = {
       :term => 'google'
     }
-    set_options(defaults.merge(opts))
+    set_options(defaults.merge(opts)) # This creates @term as an instance variable.
   end
 
   def start
