@@ -14,7 +14,12 @@ class GoogleSearch < DataFactory
 
   def start
     visit GooglePage do |page|
-      # Pass @term as an argument to the search action on the Google Page.
+      # Call page.search with @term as an argument to set the
+      # value of the Google search box once it is present.
+      # Search is an action defined in:
+      #   lib/ole_training/page_objects/google_page.rb line 8
+      # The search box element is defined in:
+      #   lib/ole_training/page_objects/google_page.rb line 7
     end
   end
 
