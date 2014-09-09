@@ -12,8 +12,7 @@ class GoogleSearch < DataFactory
 
   def start
     visit GooglePage do |page|
-      # Call the search action on the Google Page with @term as an argument
-      #   to perform a Google search.
+      # Pass @term as an argument to the search action on the Google Page.
     end
   end
 
