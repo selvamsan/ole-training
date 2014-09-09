@@ -20,6 +20,7 @@ class GoogleSearch < DataFactory
       #   lib/ole_training/page_objects/google_page.rb line 8
       # The search box element is defined in:
       #   lib/ole_training/page_objects/google_page.rb line 7
+      page.search @term
     end
   end
 
