@@ -1,4 +1,4 @@
-config/options.yml
+#config/options.yml
 *.komodoproject
 .rspec
 *.gem
