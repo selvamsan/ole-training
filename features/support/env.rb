@@ -24,24 +24,24 @@ World(StringFactory)
 World(OleTraining::Helpers)
 
 # Set up Headless.
-if OleTraining.options[:headless?]
-  @headless = Headless.new
-  @headless.start
-end
+#if OleTraining.options[:headless?]
+  #@headless = Headless.new
+  #@headless.start
+#end
 
-Before do |scenario|
-  @browser = OleTraining.start_browser
-end
+#Before do |scenario|
+  #@browser = OleTraining.start_browser
+#end
 
-After do |scenario|
-  if scenario.failed?
-    filename = "#{OleTraining.timestamp}-#{scenario.name.gsub(/\s/,'_')}.png"
-    @browser.screenshot.save("screenshots/#{filename}")
-  end
-  @browser.close unless @browser.nil?
-end
+#After do |scenario|
+  #if scenario.failed?
+    #filename = "#{OleTraining.timestamp}-#{scenario.name.gsub(/\s/,'_')}.png"
+    #@browser.screenshot.save("screenshots/#{filename}")
+  #end
+  #@browser.close unless @browser.nil?
+#end
 
-at_exit do
-  # Cleaning up Headless if it's been instantiated.
-  @headless.destroy if @headless
-end
+#at_exit do
+  ## Cleaning up Headless if it's been instantiated.
+  #@headless.destroy if @headless
+#end
