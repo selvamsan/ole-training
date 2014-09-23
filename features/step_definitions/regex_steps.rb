@@ -28,7 +28,7 @@ end
 # and 'Then' for any steps matching an expected outcome.
 # There's no need to use the 'And' keyword in step definitions.
 #
-When /^I have a () word$/ do |word|
+When /^I have (a special|an alternate) word$/ do |word|
   @words << word
 end
 
@@ -43,7 +43,7 @@ end
 #   as explained in the 'Multiple Occurrences' section of the tutorial at
 #   http://codular.com/regex.
 #
-When /^I have data $/ do |data|
+When (/^I have data "(.*?)"$/) do |data|
   @words << data
 end
 
@@ -62,7 +62,7 @@ end
 # - Make sure the number quantifier expression is inside of a capture
 #   group so that it is captured as the variable 'num'.
 #
-When /^$/ do |num|
+When /^I have an? (\d{1,2})$/ do |num|
   # *INFO*
   #
   # num is actually a string when first captured,
@@ -78,7 +78,7 @@ end
 # - As above, use a capture group and a number quantifier expression
 #   to ensure that the value '42' is passed to the variable 'sum'.
 #
-Then /^$/ do |sum|
+Then /^I have a sum of (\d{1,2})$/ do |sum|
   # *INFO*
   #
   # This is an RSpec expectation.
